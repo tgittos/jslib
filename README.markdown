@@ -6,6 +6,7 @@ A collection of Javascript functions and plugins I've made over the years as a w
 All of the (limited) functionality in here can be reproduced with JQuery, and much better. Seriously, use JQuery, not this.
 
 Functionality includes:
+
 * multiple functions on document load (jslib.onload)
 * observer design pattern implementation (jslib.events)
 * debugging tools (jslib.debug)
