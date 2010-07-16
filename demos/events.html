@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="../src/core.js" language="javascript"></script>
+        <script src="../src/events.js" language="javascript"></script>
+        <script language="javascript">
+        	//Define a test function
+        	function test(e)
+            {
+                jslib.debug.trace("Hey, I just got " + e);
+            }
+            
+        	//Register for events on load
+			jslib.onload(function(){
+			    jslib.events.subscribe("test", test);
+                jslib.events.subscribe("test", function(e){jslib.debug.trace("recieved " + e)});
+                
+                jslib.events.notify("test", " a poke in the eye with a hot stick");
+                
+                jslib.events.unsubscribe("test", test);
+                
+                jslib.events.notify("test", " another poke in the eye! Boy, you're dumb.");
+			});
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
